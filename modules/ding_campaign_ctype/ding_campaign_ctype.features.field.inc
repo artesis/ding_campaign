@@ -196,6 +196,88 @@ function ding_campaign_ctype_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-ding_campaign-field_camp_pane_id'.
+  $fields['node-ding_campaign-field_camp_pane_id'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_camp_pane_id',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          1 => '1',
+          2 => '2',
+          3 => '3',
+          4 => '4',
+          5 => '5',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'ding_campaign',
+      'default_value' => array(
+        0 => array(
+          'value' => '',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 5,
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser_highlight' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_camp_pane_id',
+      'label' => 'Campaign panel pane number',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '1',
+      ),
+    ),
+  );
+
   // Exported field: 'node-ding_campaign-field_camp_settings'.
   $fields['node-ding_campaign-field_camp_settings'] = array(
     'field_config' => array(
@@ -540,6 +622,7 @@ function ding_campaign_ctype_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Campaign image');
   t('Campaign link');
+  t('Campaign panel pane number');
   t('Campaign settings');
   t('Campaign text');
   t('Weight');
