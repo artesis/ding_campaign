@@ -41,6 +41,7 @@ function ding_campaign_ctype_image_default_styles() {
         'weight' => '1',
       ),
     ),
+    'label' => 'ding_campaign_w_180',
   );
 
   // Exported image style: ding_campaign_w_280.
@@ -64,6 +65,7 @@ function ding_campaign_ctype_image_default_styles() {
         'weight' => '1',
       ),
     ),
+    'label' => 'ding_campaign_w_280',
   );
 
   // Exported image style: ding_campaign_w_380.
@@ -87,6 +89,7 @@ function ding_campaign_ctype_image_default_styles() {
         'weight' => '1',
       ),
     ),
+    'label' => 'ding_campaign_w_380',
   );
 
   // Exported image style: ding_campaign_w_480.
@@ -110,6 +113,7 @@ function ding_campaign_ctype_image_default_styles() {
         'weight' => '1',
       ),
     ),
+    'label' => 'ding_campaign_w_480',
   );
 
   return $styles;
