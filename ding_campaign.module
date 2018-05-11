@@ -179,7 +179,7 @@ function ding_campaign_display($context, $count, $offset, $style = 'medium') {
  * @return
  */
 function ding_campaign_get_campaigns($context, $limit, $offset) {
-
+  global $language;
   $campaigns = array();
 
   // Process event campaigns.
@@ -193,6 +193,7 @@ function ding_campaign_get_campaigns($context, $limit, $offset) {
         AND n.status = 1
         AND r.cid = d.cid
         AND r.cid = n.nid
+        AND (n.language = \'' . $language->language . '\' OR n.language = \'und\')
       ORDER BY d.weight DESC', array(':nid' => (int) $nid))
       ->fetchAll();
 
@@ -212,6 +213,7 @@ function ding_campaign_get_campaigns($context, $limit, $offset) {
         AND n.status = 1
         AND r.cid = d.cid
         AND r.cid = n.nid
+        AND (n.language = \'' . $language->language . '\' OR n.language = \'und\')
       ORDER BY d.weight DESC', array(':nid' => (int) $nid))
       ->fetchAll();
 
@@ -231,6 +233,7 @@ function ding_campaign_get_campaigns($context, $limit, $offset) {
         AND n.status = 1
         AND r.cid = d.cid
         AND r.cid = n.nid
+        AND (n.language = \'' . $language->language . '\' OR n.language = \'und\')
       ORDER BY d.weight DESC', array(':nid' => (int) $nid))
       ->fetchAll();
 
@@ -246,6 +249,7 @@ function ding_campaign_get_campaigns($context, $limit, $offset) {
       AND n.status = 1
       AND r.cid = d.cid
       AND r.cid = n.nid
+      AND (n.language = \'' . $language->language . '\' OR n.language = \'und\')
     ORDER BY d.weight DESC')
     ->fetchAll();
 
@@ -285,6 +289,7 @@ function ding_campaign_get_campaigns($context, $limit, $offset) {
         AND r.cid = d.cid
         AND r.cid = n.nid
         AND r.rule ' . $condition . '
+        AND (n.language = \'' . $language->language . '\' OR n.language = \'und\')
       ORDER BY d.weight DESC')
       ->fetchAll();
 
@@ -304,6 +309,7 @@ function ding_campaign_get_campaigns($context, $limit, $offset) {
         AND n.status = 1
         AND r.cid = d.cid
         AND r.cid = n.nid
+        AND (n.language = \'' . $language->language . '\' OR n.language = \'und\')
       ORDER BY d.weight DESC', array(':nid' => (int) $nid))
       ->fetchAll();
 
@@ -323,6 +329,7 @@ function ding_campaign_get_campaigns($context, $limit, $offset) {
         AND n.status = 1
         AND r.cid = d.cid
         AND r.cid = n.nid
+        AND (n.language = \'' . $language->language . '\' OR n.language = \'und\')
       ORDER BY d.weight DESC', array(':tid' => (int) $tid))
       ->fetchAll();
 
@@ -338,6 +345,7 @@ function ding_campaign_get_campaigns($context, $limit, $offset) {
       AND n.status = 1
       AND r.cid = d.cid
       AND r.cid = n.nid
+      AND (n.language = \'' . $language->language . '\' OR n.language = \'und\')
     ORDER BY d.weight DESC')
     ->fetchAll();
 
